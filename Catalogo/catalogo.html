@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Catalogo..css">
+  <title>Catálogo de Salsa Picante</title>
+</head>
+<style>
+  nav {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            color: rgb(253, 253, 253);
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #ff111dc0; /* Hover color */
+        }
+        /*Carusel de imagenes*/
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .carrusel {
+            width: 100%;
+            max-width: 600px;
+            overflow: hidden;
+            position: relative;
+            margin: auto;
+            margin-top: 20px;
+        }
+        .imagenes {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .imagen {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+</style>
+<body>
+  
+  <header>
+    <h1>Catálogo de Salsa Picante</h1>
+    <br>
+    <div class="container">
+      <div class="glass-container">
+        
+          <nav class="navbar">
+            
+              <ul class="nav-links">
+                
+                  <li class="nav-link"><a href="../index.html">Pagina Principal</a></li>
+                  <li class="nav-link"><a href="../Catalogo/Catalogo.html">Catalogo</a></li>
+                  <li class="nav-link"><a href="../Nosotros/proyecto.html">Nosotros</a></li>
+                  <li class="nav-link"><a href="../acerca/acerca.html">Acerca de</a></li>
+              </ul>
+           
+          </nav>
+       
+  </header>
+  <div class="contenedor">
+<script>
+  let index = 0;
+
+  function mostrarSiguienteImagen() {
+      const imagenes = document.querySelector('.imagenes');
+      const totalImagenes = document.querySelectorAll('.imagen').length;
+      
+      index = (index + 1) % totalImagenes; // Incrementa el índice y reinicia si llega al total
+      imagenes.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  setInterval(mostrarSiguienteImagen, 5000); // Cambia cada 3 segundos
+</script>
+    <div class="carrusel">
+        <div class="imagenes">
+            <div class="imagen"><img src="../imagenes/img1.jpg" alt="Imagen 2"></div>
+            <div class="imagen"><img src="../imagenes/img2.jpg" alt="Imagen 2"></div>
+            <div class="imagen"><img src="../imagenes/img4.jpg" alt="Imagen 2"></div>
+        </div>
+      </div>
+ </div>
+</body>
+ <br>
+ <div class="contenedor">
+    <div class="tarjeta">
+     <h2 class="titulo">Salsa Roja</h2>
+     <div class="cuerpo">
+     <img class="car-imagen" src="../imagenes/9.jfif" alt="muestra" >
+     <p>Intencidad de</br>
+         picor alto</p>
+     </div>
+    </div>
+    
+    <div class="tarjeta">
+     <h2 class="titulo">Salsa Verde</h2>
+     <div class="cuerpo">
+     <img class="car-imagen" src="../imagenes/21.jfif" alt="muestra">
+     <p> Intencidad de </br>
+        picor bajo</p>
+     </div>
+    </div>
+    
+    <div class="tarjeta">
+     <h2 class="titulo">Salsa Naranja</h2>
+     <div class="cuerpo">
+        <img class="car-imagen" src="../imagenes/22.jfif" alt="muestra">
+     <p>Intencidad de</br>
+         picor medio</p>
+     </div>
+    </div>
+    </div>
+
+    <style>
+        .contenedor{ 
+display: flex; 
+justify-content:center; 
+flex-wrap:wrap; 
+gap: 16px; 
+} 
+
+.tarjeta{
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+width: auto;
+border: 1px solid lightgray;
+box-shadow: 2px 2px 8px 4px #d3d3d3d1;
+border-radius:15px;
+font-family: sans-serif;
+}
+
+.titulo{
+font-size: 24px;
+padding: 10px 10px 0 10px;;
+}
+
+.cuerpo{
+padding: 10px;
+display: flex; /* Alinear la imagen y el texto en línea */
+align-items: center; /* Centrar verticalmente */
+}
+
+.pie{
+background: #6699ff;
+border-radius:0 0 15px 15px;
+padding: 10px;
+text-align:center;
+}
+
+.pie a{
+text-decoration: none;
+color: white;
+}
+
+.pie a:after {
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+z-index: 1;
+content: ""
+} 
+.car-imagen {
+    
+  max-width: 200px; /* Cambia esto al tamaño deseado */
+  height: auto; /* Mantiene la proporción */
+  margin-right: 10px; /* Espacio entre la imagen y el texto */
+}
+    </style>
+ <footer>
+  <p>&copy; 2024 Catálogo de Salsa Picante</p>
+</footer>
+</html>

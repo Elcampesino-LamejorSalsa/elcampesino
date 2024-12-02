@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Ejemplo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e6223c;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .navbar {
+            background-color: #333;
+            padding: 10px 0;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+        .nav-link {
+            margin: 0 15px;
+        }
+        .nav-link a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .nav-link a:hover {
+            text-decoration: underline;
+        }
+        header {
+            text-align: center;
+            margin: 20px 0;
+        }
+        header h1 {
+            margin-bottom: 10px;
+        }
+        .icono {
+            max-width: 150px;
+            border-radius: 50%;
+        }
+        .content {
+            margin-top: 20px;
+        }
+        .accordion-section {
+            background-color: #e71722;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        .accordion-section h2 {
+            color: #333;
+            margin: 0;
+        }
+        .accordion-section p {
+            line-height: 1.6;
+            color: #000000;
+            display: none;
+            margin-top: 10px;
+        }
+        .accordion-section.active p {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li class="nav-link"><a href="../index.html">Página Principal</a></li>
+                <li class="nav-link"><a href="../Catalogo/catalogo.html">Catálogo</a></li>
+                <li class="nav-link"><a href="../Nosotros/proyecto.html">Nosotros</a></li>
+                <li class="nav-link"><a href="../acerca/acerca.html">Acerca de</a></li>
+            </ul>
+        </nav>
+        <header>
+            <h1>NOSOTROS</h1>
+            <img src="../imagenes/4.jfif" alt="Icono" class="icono">
+        </header>
+        <div class="content">
+            <div class="accordion-section" id="mision-section">
+                <h2>Misión</h2>
+                <p>Crear una salsa habanera con un toque único, que les brinde un sabor agradable al paladar, para los amantes de lo picante.</p>
+            </div>
+            <div class="accordion-section" id="vision-section">
+                <h2>Visión</h2>
+                <p>Expandir el sabor de la salsa habanera en todas las áreas de consumo básico y crear puntos de venta a nivel regional.</p>
+            </div>
+            <div class="accordion-section" id="historia-section">
+                <h2>Historia</h2>
+                <p>El negocio de salsa picante se inició debido a un proyecto estudiantil que fue bien recibido y se dio a conocer a través de una idea de negocios.</p>
+            </div>
+        </div>
+        
+        <script>
+            document.querySelectorAll('.accordion-section').forEach(section => {
+                section.addEventListener('click', () => {
+                    section.classList.toggle('active');
+                });
+            });
+        </script>
+</body>
+</html>
